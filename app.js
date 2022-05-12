@@ -5,7 +5,6 @@ const res = require('express/lib/response');
 const path = require('path');
 const { nextTick } = require('process');
 const app = express();
-const {start1c} = require("./daughter.js");
 const for1c = require('./module/for1c')
 const text = require('./module/web_injection')
 
