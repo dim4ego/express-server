@@ -6,7 +6,7 @@ const path = require('path');
 const { nextTick } = require('process');
 const app = express();
 const for1c = require('./module/for1c')
-const text = require('./module/web_injection')
+//const text = require('./module/web_injection')
 
 
 
