@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="/app.js"></script> -->
+    <link rel="stylesheet" href="/styles.css">
+    <title>My server</title>
+</head>
+<body>
+    <h1>My server</h1>
+    <p>Server built with Node.js and Express</p>
+    <h1 id = "information_about_start1c"> Ожидание запуска обмена </h1>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<div class="field">
+    <button url="http://192.168.61.12:3333/kill1c">Убить 1с</button>
+    <button url="http://192.168.61.12:3333/start1c">Запустить 1с</button>
+    <button url="https://stacksnippets.net">stacksnippets.net</button>
+    <button url="https://stacksnippets.net">stacksnippets.net</button>
+    
+    <input type="button" id="addButton"  value="Add  Cat" onclick="output()" >
+</div>
+
+<script>
+    function output()
+        {
+            //let myWindow = window.open("http://192.168.61.12:3333/kill1c", "_blank", "top=100, left=100, width=400, height=500, scrollbars=yes, resizable=yes");
+            //myWindow.close()
+            let url = 'http://192.168.61.12:3333/kill1c';
+            let result = fetch(url)
+            result.then(function(response) {return response.json();}).then(function (data) {console.log(data["statusOfkill"]);});
+            
+           // let response =  fetch(url).then(res => res.json()) ;
+            //let respJson = response.then()
+    
+            //let commits = response; // читаем ответ в формате JSON1
+           // console.log(respJson[1]);
+            //alert("testing RadioButton events");
+        }
+
+
+</script>
+
+<script>
+ //   $('button').on('click', function(){     
+	    //window.location.href = $(this).attr('url');
+       // window.location.replace("http://192.168.61.12:3333/")
+        
+   // });
+</script>
+<!-- <script>
+    let url = 'http://192.168.61.12:3333/start1c';
+    let response =  fetch(url).then(res => res.json()) ;
+    
+    let commits = response; // читаем ответ в формате JSON
+      console.log(commits);
+       
+    
+    
+    
+    
+    
+    </script> -->
+</body>
+</html>
