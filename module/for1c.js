@@ -1,22 +1,114 @@
 
-const { exec, spawn, spawnSync } = require('child_process');
-let prog1c = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe";
-let prog1cAnother = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8s.exe";
+//import { parse } from 'csv-parse';
 
-var result
+const { exec, spawn, spawnSync } = require('child_process');
+const { stderr, stdin } = require('process');
+
+//let prog1c = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe";
+//let prog1cAnother = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8s.exe";
+
+
+//exec (`tasklist /FO CSV`,   (err, stdout, stderr)  =>{console.log(stdout.indexOf('1cv8' || '1cv8s'))} ) 
+//var azaz = exec (`tasklist /FI "IMAGENAME eq notepad.exe"`,   (err, stdout, stderr)  =>{console.log(stdout)} )
+
+ //console.log('Переменная азаз = ', azaz)   
+ 
+ module.exports.startOrNot1c =  function() {
+    
+
+    exec(`tasklist /FO CSV`, (err, stdout, stderr) => {
+       // var ret;
+        if (err || stderr)
+        return console.error(err || stderr);
+       // ret = stdout;
+        
+        if (stdout.indexOf('1cv8' || '1cv8s') == -1) {
+            //console.log("1с не запущенна")
+            myCallback(false)
+            
+            
+        } else {
+            //console.log("1с запущенна ")
+            myCallback(true)
+        }
+       
+        
+        
+      })
+    }
+
+    function myCallback(ret){
+        if (ret == true) {
+            onOrOf(1)
+            
+        } else {
+            onOrOf(2)
+        }
+
+        //console.log(ret)
+        return 'jopajopa'
+        
+    
+    
+    }  
+
+
+    function onOrOf (trueOrFals){
+
+        if (trueOrFals) {
+
+            return true
+            
+        } else {
+            return false
+        }
+    }
+    
+var jaja = onOrOf()
+
+console.log(jaja)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports.kill1c = function() {
     try {
-        console.log('пытаемся закрыть 1ску')
-        spawn("taskkill", ["/IM", '1c*', '/F', '/t'])
-        console.log('1ска закрыта')
+        console.log('пытаемся закрыть 1ску');
+        spawn("taskkill", ["/IM", '1c*', '/F', '/t']);
+        console.log('1ска закрыта');
+        return ('Программа 1с закрыта');
     } catch (error) {
         console.error(error);
+        return error;
     };
 }
 
 
-module.exports.startOrNot1c =  function() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* module.exports.startOrNot1c =  function() {
     
 
     exec(`tasklist /FO CSV`, (err, stdout, stderr) => {
@@ -26,21 +118,24 @@ module.exports.startOrNot1c =  function() {
         
         if (stdout.indexOf('1cv8' || '1cv8s') == -1) {
             console.log("1с не запущенна")
-            result = false
+            return false
             
         } else {
             console.log("1с запущенна ")
-            result = true
+            return true
         }
       
-        return result
+        
         
       })
     }
+ */
 
 
-
-    module.exports.start1c = function()  {
+   /*  module.exports.start1c = function()  {
         spawnSync(prog1c, [ "enterprise" ,"/SUD-S2\\cn_uraldon8.2" , '/Nadmin' , "/Pescape" ]);
         
     }
+ */
+
+    

@@ -5,41 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="/app.js"></script> -->
     <link rel="stylesheet" href="/styles.css">
+    
     <title>My server</title>
 </head>
 <body>
     <h1>My server</h1>
-    <p>Server built with Node.js and Express</p>
-    <h1 id = "information_about_start1c"> Ожидание запуска обмена </h1>
+    <p id="infa">Server built with Node.js and Express</p>
+    <h2> какой то текст </h2>
+    <h1 id = "information_about"> Ожидание запуска обмена </h1>
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="k1c">
+    <input type="button" id="k1cButton"  value="Закрыть 1С8" onclick="k1c()" >
 
-<div class="field">
-    <button url="http://192.168.61.12:3333/kill1c">Убить 1с</button>
-    <button url="http://192.168.61.12:3333/start1c">Запустить 1с</button>
-    <button url="https://stacksnippets.net">stacksnippets.net</button>
-    <button url="https://stacksnippets.net">stacksnippets.net</button>
+</div>
+
+<div class="buttonUpload">
+     
     
-    <input type="button" id="addButton"  value="Add  Cat" onclick="output()" >
+    
+    <input type="button" id="buhUploadHolding"  value="Выгрузить Базу Холдинга" onclick="buhUploadHolding()" >
+    <input type="button" id="buhUploadEL"  value="Выгрузить Базу Кагальницкий Элеватор" onclick="buhUploadEL()" >
+    <input type="button" id="buhUploadKA"  value="Выгрузить Базу Кагальник-Агро" onclick="buhUploadKA()" >
+    <input type="button" id="buhUploadME"  value="Выгрузить Базу Мечетинское" onclick="buhUploadME()" >
+    <input type="button" id="buhUploadBE"  value="Выгрузить Базу Березовское" onclick="buhUploadBE()" >
+    <input type="button" id="buhUploadLI"  value="Выгрузить Базу Литунова" onclick="buhUploadLI()" >
+    <input type="button" id="buhUploadPF"  value="Выгрузить Базу Птицефабрика" onclick="buhUploadPF()" >
+    <input type="button" id="buhUploadST"  value="Выгрузить Базу Стычное" onclick="buhUploadST()" >
+    <input type="button" id="buhUploadBA"  value="Выгрузить Базу Багаевск-Агро" onclick="buhUploadBA()" >
+    <input type="button" id="buhUploadF36"  value="Выгрузить Базу Форма 36" onclick="buhUploadF36()" >
+    <input type="button" id="buhUploadALL"  value="Выгрузить все базы за исключением Ф36" onclick="buhUploadALL()" >
+
+
+
+
+</div>
+
+<div class="buttonDownload">
+     
+    
+    
+    <input type="button" id="buhDownloadHolding"  value="Загрузить Базу Холдинга" onclick="buhDownloadHolding()" >
+    <input type="button" id="buhDownloadEL"  value="Загрузить Базу Кагальницкий Элеватор" onclick="buhDownloadEL()" >
+    <input type="button" id="buhDownloadKA"  value="Загрузить Базу Кагальник-Агро" onclick="buhDownloadKA()" >
+    <input type="button" id="buhDownloadME"  value="Загрузить Базу Мечетинское" onclick="buhDownloadME()" >
+    <input type="button" id="buhDownloadBE"  value="Загрузить Базу Березовское" onclick="buhDownloadBE()" >
+    <input type="button" id="buhDownloadLI"  value="Загрузить Базу Литунова" onclick="buhDownloadLI()" >
+    <input type="button" id="buhDownloadPF"  value="Загрузить Базу Птицефабрика" onclick="buhDownloadPF()" >
+    <input type="button" id="buhDownloadST"  value="Загрузить Базу Стычное" onclick="buhDownloadST()" >
+    <input type="button" id="buhDownloadBA"  value="Загрузить Базу Багаевск-Агро" onclick="buhDownloadBA()" >
+    <input type="button" id="buhDownloadF36"  value="Загрузить Базу Форма 36" onclick="buhDownloadF36()" >
+    <input type="button" id="buhDownloadALL"  value="Загрузить все базы за исключением Ф36" onclick="buhDownloadALL()" >
+
+
+
+
 </div>
 
 <script>
-    function output()
+    function k1c()
         {
             //let myWindow = window.open("http://192.168.61.12:3333/kill1c", "_blank", "top=100, left=100, width=400, height=500, scrollbars=yes, resizable=yes");
             //myWindow.close()
-            let url = 'http://192.168.61.12:3333/kill1c';
-            let result = fetch(url)
-            result.then(function(response) {return response.json();}).then(function (data) {console.log(data["statusOfkill"]);});
+
+            let url = 'http://localhost:3333/kill1c';
+                  
+            let res = fetch(url).then(function(response) {return response.json()}).then(function(data){ 
+                let inf = document.querySelector('#information_about')
+                inf.textContent = data[0].statusOfkill
+                console.log(data[0].statusOfkill)
             
-           // let response =  fetch(url).then(res => res.json()) ;
-            //let respJson = response.then()
-    
-            //let commits = response; // читаем ответ в формате JSON1
-           // console.log(respJson[1]);
-            //alert("testing RadioButton events");
+            })
+            
         }
 
 
@@ -65,5 +104,8 @@
     
     
     </script> -->
+   
+
+    
 </body>
 </html>

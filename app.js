@@ -6,6 +6,10 @@ const path = require('path');
 const { nextTick } = require('process');
 const app = express();
 const for1c = require('./module/for1c')
+
+
+
+
 //const text = require('./module/web_injection')
 
 
@@ -20,22 +24,20 @@ app.get('/', (req,res) => {
 
 });
 
-app.get('/kill1c', (req,res) => {
+app.use('/kill1c', (req,res) => {
     //spawn("taskkill", ["/IM", '1c*', '/F', '/t']);
-    for1c.kill1c();
-   //res.send('<h1 id = "information_about_start1c"> Запуск убийства прошел успешно</h1>')
-    
-   return res.json([{
-    statusOfkill: "Убийство прошло успешно",   
-    id: 1,
-    author: "lenin",
-    title: 'TITLBLE'
-
-
-}])
-
+    console.log(req.url, req.headers, req.method)
+        let answer = for1c.kill1c();
+         
+        return res.json([{
+            statusOfkill: answer,
+        //statusOfkill: "Program is close",  
+      
+        
+    }])
 });
 
+   
 app.get('/start1c', (req,res) => {
    
     return res.json([{
