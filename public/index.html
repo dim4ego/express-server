@@ -18,14 +18,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div class="k1c">
-    <input type="button" id="k1cButton"  value="Закрыть 1С8" onclick="k1c()" >
+   <!-- <input type="button" id="k1cButton"  value="Закрыть 1С8" onclick="k1c()" >-->
+    <button id="close1c">
+        <img src="./img/exit.ico" width="20" alt="" style="vertical-align:middle "> 
+        Закрыть 1С8
+       </button></p>
 
 </div>
 
 <div class="buttonUpload">
      
     
-    
+   
     <input type="button" id="buhUploadHolding"  value="Выгрузить Базу Холдинга" onclick="buhUploadHolding()" >
     <input type="button" id="buhUploadEL"  value="Выгрузить Базу Кагальницкий Элеватор" onclick="buhUploadEL()" >
     <input type="button" id="buhUploadKA"  value="Выгрузить Базу Кагальник-Агро" onclick="buhUploadKA()" >
@@ -65,6 +69,40 @@
 </div>
 
 <script>
+    const buttonClose1c = document.querySelector('#close1c');
+    buttonClose1c.addEventListener('click', function(){
+        console.log('button is press')
+        let url = 'http://localhost:3333/kill1c';
+                  
+            let res = fetch(url).then(function(response) {return response.json()}).then(function(data){ 
+                let inf = document.querySelector('#information_about')
+                inf.textContent = data[0].statusOfkill
+                console.log(data[0].statusOfkill)
+                  
+            
+            })
+            
+    
+    
+    })
+    function buhUploadHolding(){
+        let url = 'http://localhost:3333/buhUploadHolding';
+                  
+            let res = fetch(url).then(function(response) {return response.json()}).then(function(data){ 
+                let inf = document.querySelector('#information_about')
+                inf.textContent = data[0].statusOfkill
+                console.log(data[0].statusOfkill)
+            
+            })
+
+
+
+
+
+    }
+
+
+
     function k1c()
         {
             //let myWindow = window.open("http://192.168.61.12:3333/kill1c", "_blank", "top=100, left=100, width=400, height=500, scrollbars=yes, resizable=yes");

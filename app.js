@@ -37,6 +37,20 @@ app.use('/kill1c', (req,res) => {
     }])
 });
 
+
+app.use('/buhUploadHolding', (req,res) => {
+    //spawn("taskkill", ["/IM", '1c*', '/F', '/t']);
+    console.log(req.url, req.headers, req.method)
+        let answer = for1c.kill1c();
+         
+        return res.json([{
+            statusOfkill: answer,
+        //statusOfkill: "Program is close",  
+      
+        
+    }])
+});
+
    
 app.get('/start1c', (req,res) => {
    

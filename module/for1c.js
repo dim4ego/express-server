@@ -13,65 +13,6 @@ const { stderr, stdin } = require('process');
 
  //console.log('Переменная азаз = ', azaz)   
  
- module.exports.startOrNot1c =  function() {
-    
-
-    exec(`tasklist /FO CSV`, (err, stdout, stderr) => {
-       // var ret;
-        if (err || stderr)
-        return console.error(err || stderr);
-       // ret = stdout;
-        
-        if (stdout.indexOf('1cv8' || '1cv8s') == -1) {
-            //console.log("1с не запущенна")
-            myCallback(false)
-            
-            
-        } else {
-            //console.log("1с запущенна ")
-            myCallback(true)
-        }
-       
-        
-        
-      })
-    }
-
-    function myCallback(ret){
-        if (ret == true) {
-            onOrOf(1)
-            
-        } else {
-            onOrOf(2)
-        }
-
-        //console.log(ret)
-        return 'jopajopa'
-        
-    
-    
-    }  
-
-
-    function onOrOf (trueOrFals){
-
-        if (trueOrFals) {
-
-            return true
-            
-        } else {
-            return false
-        }
-    }
-    
-var jaja = onOrOf()
-
-console.log(jaja)
-
-
-
-
-
 
 
 
@@ -97,6 +38,7 @@ module.exports.kill1c = function() {
 
 
 
+        
 
 
 
