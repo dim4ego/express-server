@@ -12,12 +12,71 @@ let prefixForPass = "/P"
 let prefixForEpf = "/Execute"
 let prefixForLog = "/OUT"
 
-console.log(choseBase("ud", "up"))
 
-function choseBase(base, upOrDown){
-    if (upOrDown == "upload" & base ==) {
+startExchange("upload","ba")
+function startExchange(upOrDown, base){
+    if (upOrDown == "upload" & base =="ud") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_BA_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_ud.txt");
+         //spawnSync(prog1c, [ "enterprise" ,"/SUD-S2\\cn_uraldon8.2" , '/Nadmin' , "/Pescape" ]);
+    }
+    if (upOrDown == "upload" & base =="ba") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_UD_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_ba.txt");
         
     }
+    if (upOrDown == "upload" & base =="be") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_BE_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_be.txt");
+        
+    }
+    if (upOrDown == "upload" & base =="ka") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_KA_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_ka.txt");
+    }
+    if (upOrDown == "upload" & base =="el") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_EL_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_el.txt");
+        
+    }
+    if (upOrDown == "upload" & base =="li") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_LI_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_li.txt");
+
+        
+    }
+    if (upOrDown == "upload" & base =="me") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_ME_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_me.txt");
+
+    }
+    if (upOrDown == "upload" & base =="st") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_ST_OUT "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\cn_st.txt");
+        
+    }
+    if (upOrDown == "download" & base =="ud") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_UD_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\ud_cn.txt");
+
+        
+    }
+    if (upOrDown == "download" & base =="ba") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_BA_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\ba_cn.txt");
+        
+    }
+    if (upOrDown == "download" & base =="be") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_BE_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\be_cn.txt");
+        
+    }
+    if (upOrDown == "download" & base =="ka") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_KA_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\ka_cn.txt");
+    }
+    if (upOrDown == "download" & base =="el") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_EL_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\el_cn.txt");
+    }
+    if (upOrDown == "download" & base =="li") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_LI_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\li_cn.txt");
+    }
+    if (upOrDown == "download" & base =="me") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_ME_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\me_cn.txt");
+    }
+    if (upOrDown == "download" & base =="st") {
+        console.log("C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe "+"enterprise "+"/SUD-S2\\cn_uraldon8.2 "+"/NExchange_ST_IN "+"/PFag90TMng "+"/Execute "+"/OUTd:\\Scripts\\exchange\\1s8\\buhsh\\log\\st_cn.txt");
+    }
+
+
 }
     
 
@@ -40,7 +99,7 @@ let cn = {
 
     download: {
         login1c :prefixForLogin+ "Exchange_UD_IN ",
-        key:"ud_cn"
+        key:"ud_cn",
         db:prefixForFileDb+"D:\\DB1S8\\Holding\\BuhSh\\ ",
         pathExchange:"D:\\DB1S8\\Holding\\BuhSh\\exchange\\ ",
         password_1s:prefixForPass+"Fag90TMng ",
