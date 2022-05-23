@@ -6,6 +6,12 @@ const { stderr, stdin } = require('process');
 
 
 
+
+
+
+
+
+
 //let prog1c = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8.exe";
 //let prog1cAnother = "C:\\Program Files\\1cv8\\8.3.20.1674\\bin\\1cv8s.exe";
 
@@ -82,4 +88,3 @@ module.exports.kill1c = function() {
     }
  */
 
-    
